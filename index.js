@@ -1,6 +1,26 @@
+// function hasTargetSum(array, target) {
+//   for (let i = 0; i < array.length; i++) {
+//     let j = i + 1;
+//     if (array[i] + array[j] === target) {
+//       return true;
+//     } else {
+//       array[j] = array[j] + 1
+//     }
+//   }
+//   return false;
+// }
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
+  for (let i = 0; i < array.length; i += 1) {
+    for (let j = i + 1; j < array.length; j += 1) {
+      if (array[i] + array[j] === target) {
+        return true
+      }
+    }
+  }
+  return false;
 }
+
 
 /* 
   Write the Big O time complexity of your function here
@@ -8,6 +28,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  the function should return true if any pair of numbers addus up to target number
+  iterate through the array and see if any numbers sum === 10
+
 */
 
 /*
